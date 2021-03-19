@@ -1,7 +1,9 @@
 # 소개
 
-
 * 임성수
+
+<img src="a.jpg">
+
 * Email : tjdtn2323@gmail.com
 * Github : [github.com/limseongsu](https://github.com/limseongsu)
 
@@ -13,8 +15,4 @@
 * [씨앤에스](http://www.cnssoft.co.kr/)
     - 반도체 장비 운영 엔지니어
     - 업무 : STK를 운영 (반도체 라인 내 반도체 보관장치)
-
-# 자격증
-*[태권도3단]
-
-#
+* 
