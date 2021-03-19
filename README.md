@@ -79,9 +79,9 @@ public class BootSpringBootApplication {
 
 ---------------------------------------
 
-[link keyword][id]
+[성수허브][id]
 
-[id]: URL "Optional Title here"
+[id]: https://github.com/limseongsu/Seongsu "Optional Title here"
 
 // code
 Link: [Google][googlelink]
