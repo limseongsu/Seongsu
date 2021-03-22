@@ -1,34 +1,27 @@
-# Angel Jaime
+# 김희도의 이력서
 
-<h2 align="center">About me</h2>
+<img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" />
 
-```golang
-package main
+2019년 9월 9일 업데이트한 김희도의 이력서 목차입니다:
 
-import (
-	"fmt"
-)
+- [소개](#소개)
+- [기술](#기술)
+- [경력](#경력)
+- [프로젝트](#프로젝트)
 
-type Bio map[string]string
+## 소개
 
-func main() {
-	for k, v := range GetBio() {
-		fmt.Printf("%+v: %+v\n", k, v)
-	}
-}
+![Heedo Kim](./images/heedo-01.jpeg)
 
-func GetBio() Bio {
-	return Bio{
-		"- ⚡ Quick bio:":                    "A kind of metalHead-synthWave-cyberPunk-melomaniac-gearAddict-amateurMusician-traveler-foodLover-gamer-coder-programmer-catLover-sportsAficionado hybrid",
-		"- 🔭 I’m currently working on":      "Tredicom as a Senior Software Developer --- UAdeC as a Part Time Teacher",
-		"- 🌱 I’m currently learning":        "Golang, MongoDB, RabbitMQ, K8s, GCP (Tech stack from my company) --- Sharpening my Front End Skills for the MERN stack (Personal goal)",
-		"- 👯 I’m looking to collaborate on": "Python, Golang and Docker related projects",
-		"- 🤔 I’m looking for help with":     "Anything related to what I am currently learning 😅",
-		"- 💬 Ask me about":                  "Python, PHP, Laravel, SQL, Software Design & Architecture, Web-Dev and SEO",
-		"- 📫 How to reach me:":              "https://github.com/AnhellO#you-can-reach-me-at-alien",
-	}
-}
-```
+- 이름: 김희도
+- 이메일: devheedoo@gmail.com
+- GitHub: https://github.com/devheedoo
+- LinkedIn: https://www.linkedin.com/in/heedokim93/
+- 상태: [Wave Corporation](https://www.wavetogether.com/)에서 근무 중
+
+훌륭한 산업기능요원 동료 분들을 만난 덕분에 개발 공부를 시작하게 된 주니어 개발자입니다. GitHub 저장소 탐방하기, 개발 관련 도서/블로그 읽기, 마크다운으로 글 쓰기를 좋아합니다. 매일 공부한 내용을 [TIL](https://github.com/devheedoo/TIL)에 작성하고, 다른 개발자 분들의 GitHub 저장소와 타임라인을 보며 자극을 받습니다. 장래에는 JavaScript 라이브러리를 개발하며 살고 싶습니다.
+
+
 
 <h2 align="center">You can reach me at :alien:</h2>
 
