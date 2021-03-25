@@ -10,11 +10,14 @@
   - [## 좌우명](#-좌우명)
   - [## 입사 후 포부](#-입사-후-포부)
   - [이상 임성수 이력서입니다. 봐주셔서 감사합니다.](#이상-임성수-이력서입니다-봐주셔서-감사합니다)
+  
 
 ----
 ## 소개
 
 [임성수]
+
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 - 이름: 임성수
 - 이메일: tjdtn2323@gmail.com
