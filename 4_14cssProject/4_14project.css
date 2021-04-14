@@ -1,0 +1,49 @@
+
+body {
+    background-color: black;
+}
+#div1 {
+
+    background-color: yellow;
+    /* width: 100px;
+            height: 100px; */
+}
+#div2 {
+
+    background-color: gold;
+    /* width: 100px;
+    height: 100px; */
+}
+
+#span11 {
+    background-color: red;
+}
+#span12 {
+    background-color: orange;
+}
+#span13 {
+    background-color: yellow;
+}
+#span21 {
+    background-color: green;
+}
+#span22 {
+    background-color: blue;
+}
+#span23 {
+    background-color: darkblue;
+}
+#span31 {
+    background-color: purple;
+}
+#span32 {
+    background-color: white;
+}
+#span33.hide {
+    display: none;
+}
+span {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
