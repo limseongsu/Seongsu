@@ -1,0 +1,29 @@
+
+body {
+    text-align: center;
+    margin: auto;
+}
+
+table {
+    display: inline-block;
+    width: 50;
+    background-color: yellow;
+    margin-top: 150px;
+}
+
+table,
+td {
+    border: 1px #000000 solid;
+}
+.left {
+    text-align: left;
+}
+.right {
+    text-align: right;
+}
+.bg {
+    background-color: red;
+}
+.center {
+    text-align: center;
+}

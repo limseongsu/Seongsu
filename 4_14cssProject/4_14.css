@@ -1,0 +1,15 @@
+
+span {
+    display: inline-block;
+    width: 100%;
+    text-transform: lowercase;
+    font-size: 30px;
+    line-height: -15px;
+}
+.red {
+    color: red;
+}
+.center {
+    text-align: left;
+    text-indent: 100px;
+}
