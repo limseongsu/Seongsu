@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <style>
+        span {
+            display: inline-block;
+            width: 200px;
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+            border: 1px black solid;
+            position: relative;
+            margin-left: 10%;
+            cursor: pointer;
+            left: 8%;
+            top: 200px;
+        }
+        .gray {
+            background-color: gray;
+            color: white;
+        }
+        .click {
+            background-color: white;
+            color: black;
+
+        }
+        .click2 {
+            background-color: red;
+            color: white;
+        }
+    </style>
+    <body onload="gray();">
+        <span id="bt1" onmouseover="clicker('bt1');" onclick="clicker2('bt1');">html</span>
+        <span id="bt2" onmouseover="clicker('bt2');" onclick="clicker2('bt2');">css</span>
+        <span id="bt3" onmouseover="clicker('bt3');" onclick="clicker2('bt3')">javascript</span>
+
+        <script>
+            function gray() {
+                document
+                    .getElementById('bt1')
+                    .className = 'gray';
+                document
+                    .getElementById('bt2')
+                    .className = 'gray';
+                document
+                    .getElementById('bt3')
+                    .className = 'gray';
+            }
+            function clicker(str) {
+                gray();
+                document
+                    .getElementById(str)
+                    .className = 'click';
+            }
+            function clicker2(str2) {
+                gray();
+                document
+                    .getElementById(str2)
+                    .className = 'click2';
+            }
+        </script>
+    </body>
+</html>
