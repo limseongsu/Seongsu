@@ -1,0 +1,34 @@
+
+        body{background-color: orange;}
+        #span22{background-color: gold;}
+        .span_class
+        {
+            display: inline-block;
+            background-color: brown;
+            width: 100px;
+            height: 100px;
+        }
+        .span_class1,.span_class2,.span_class3
+        {
+            display: inline-block;
+            background-color: brown;
+            width: 100px;
+            height: 100px;
+        }
+        .hide
+        {
+            display: none;
+        }
+
+        #span51, #span52
+        {
+            background-color: #ffffff;
+        }
+        #div3
+        {
+            background-color: #000000;
+        }
+        span
+        {
+            background-color: whitesmoke;
+        }

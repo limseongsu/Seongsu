@@ -1,0 +1,62 @@
+
+div {
+    display: inline-block;
+   
+}
+
+.test {
+    position: relative;
+    width: 1000px;
+    height: 1000px;
+    border: 1px #000000 solid; 
+    margin-left: 15%;
+
+}
+.test1
+{
+    position: absolute;
+    
+}
+
+#ts1 {
+   
+    top: 0;
+    left: 0;
+    background-color: blue;
+    width: 700px;
+    height: 300px;
+
+}
+#ts2 {
+    top: 0;
+    left: 700px;
+    background-color: green;
+    width: 300px;
+    height: 700px;
+
+}
+
+#ts3 {
+    bottom: 0;
+    right: 0;
+    background-color: purple;
+    width: 700px;
+    height: 300px;
+
+}
+#ts4 {
+    left: 0;
+    bottom: 0;
+    background-color: red;
+    width: 300px;
+    height: 700px;
+}
+#ts5 {
+    background-image: url(../4_14cssProject/1.jpeg);
+    width: 400px;
+    height: 400px;
+    top: 300px;
+    left: 300px;
+    background-size: 400px 400px;
+
+}

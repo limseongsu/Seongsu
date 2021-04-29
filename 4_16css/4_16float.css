@@ -1,0 +1,29 @@
+div {
+    display: inline-block;
+    border: 1px black solid;
+    width: 100px;
+    height: 100px;
+}
+
+.right {
+    background-color: blue;
+    float: right;
+}
+
+.left {
+    background-color: red;
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.img {
+    height: 500px;
+    
+    -webkit-filter: sepia(20%);
+    filter: sepia(20%);
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+}
