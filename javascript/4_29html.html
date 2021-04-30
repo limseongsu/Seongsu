@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <style>
+        div {
+            display: inline-block;
+            border: 1px #000 solid;
+        }
+        #first1 {
+            width: 400px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #first2 {
+            width: 100px;
+            height: 400px;
+            position: absolute;
+            top: 0;
+            left: 400px;
+        }
+        #first3 {
+            width: 400px;
+            height: 100px;
+            position: absolute;
+            top: 400px;
+            left: 100px;
+        }
+        #first4 {
+            width: 100px;
+            height: 400px;
+            position: absolute;
+            top: 100px;
+            left: 0;
+        }
+        #first5 {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+        .blue {
+            background-color: blue;
+        }
+        .red {
+            background-color: red;
+        }
+        .green {
+            background-color: green;
+        }
+        .purple {
+            background-color: purple;
+        }
+        .iu {
+            background: url("../templet/image/myimage7.jpeg");
+            background-size: cover;
+        }
+    </style>
+
+    <body>
+
+        <script>
+
+            document.write("<div id=\"first1\"></div>");
+            document.write("<div id=\"first2\"></div>");
+            document.write("<div id=\"first3\"></div>");
+            document.write("<div id=\"first4\"></div>");
+            document.write("<div id=\"first5\"></div>");
+
+            
+            let div1 = document.getElementById('first1');
+            let div2 = document.getElementById('first2');
+            let div3 = document.getElementById('first3');
+            let div4 = document.getElementById('first4');
+            let div5 = document.getElementById('first5');
+            
+            let red = document.getElementsByClassName('red');
+
+            div1.className = 'blue';
+            div2.className = 'red';
+            div3.className = 'green';
+            div4.className = 'purple';
+            div5.className = 'iu';
+            
+            div1.innerHTML = '1';
+            div2.innerHTML = '2';
+            div3.innerHTML = '3';
+            div4.innerHTML = '4';
+
+            div1.style.textAlign = 'center';
+            div2.style.textAlign = 'center';
+            div3.style.textAlign = 'center';
+            div4.style.textAlign = 'center';
+        
+        </script>
+
+    </body>
+</html>

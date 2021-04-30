@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <style>
+        .hidden {
+            display: none;
+        }
+        .view {
+            display: block;
+        }
+        #text {
+            font-size: 40px;
+
+        }
+    </style>
+
+    <body onload="first();">
+
+        <div id="form" class="hidden">
+            <div id="text" ></div>
+            <button onclick="setcolor('#FF0000')">빨강</button>
+            <button onclick="setcolor('#00FF00')">초록</button>
+            <button onclick="setcolor('#0000FF')">파랑</button>
+        </div>
+
+        <script>
+            function first() {
+                let text = prompt('텍스트를 입력해주세요.');
+                if (text == '') {
+                    first();
+                } 
+                document
+                    .getElementById('text')
+                    .innerHTML = text;
+                    document.getElementById('form').className = 'view';
+            }
+            function setcolor(color) {
+                if(color == "#FF0000") {
+                    alert('빨간색으로 변경됩니다.');
+                }
+                else if(color == "#00FF00") {
+                    alert('초록색으로 변경됩니다.');
+                }
+                else if(color == "#0000FF") {
+                    alert('파란색으로 변경됩니다.');
+                }
+                document.getElementById('text').style.color = color;
+            }
+        </script>
+
+    </body>
+</html>

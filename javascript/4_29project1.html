@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            function text() {
+                let name = prompt('이름을 입력.');
+
+                if (name == '') {
+                    text();
+                } else {
+                    alert(name + '안녕하세요.');
+                }
+            }
+
+            text();
+        </script>
+    </body>
+</html>

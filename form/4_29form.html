@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <form name="myform">
+            <input type="text" name="fname" onkeyup="datashow()"/>
+        </form>
+
+        <script>
+            function datashow() {
+                var data = document.forms['myform']['fname'].value;
+                console.log(data);
+            }
+        </script>
+    </body>
+</html>

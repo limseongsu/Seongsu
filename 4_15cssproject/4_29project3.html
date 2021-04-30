@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)file:///Users/imseongsu/dev/vscode/Seongsu/javascript/4_29project3.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><style>
+        span {
+            display: inline-block;
+            width: 200px;
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+            border: 1px black solid;
+            position: relative;
+            margin-left: 10%;
+            cursor: pointer;
+            left: 10%;
+            top: 200px;
+        }
+        .gray {
+            background-color: gray;
+            color: white;
+        }
+        .click {
+            background-color: white;
+            color: black;
+
+        }
+    </style></head>
+    
+    <body onload="gray();">
+        <span id="bt1" onclick="clicker(&#39;bt1&#39;);" class="gray">html</span>
+        <span id="bt2" onclick="clicker(&#39;bt2&#39;);" class="gray">css</span>
+        <span id="bt3" onclick="clicker(&#39;bt3&#39;);" class="gray">javascript</span>
+
+        <script>
+            function gray() {
+                document
+                    .getElementById('bt1')
+                    .className = 'gray';
+                document
+                    .getElementById('bt2')
+                    .className = 'gray';
+                document
+                    .getElementById('bt3')
+                    .className = 'gray';
+            }
+            function clicker(str) {
+                gray();
+                document
+                    .getElementById(str)
+                    .className = 'click';
+            }
+        </script>
+    
+</body></html>
