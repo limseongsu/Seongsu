@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <style></style>
+    <body>
+        <button id="btn1">attr 변경</button>
+        <button id="btn2">attr 확인</button>
+
+        <div id="text">now</div>
+        <a href="" id="link">link</a>
+
+        <script>
+            $(function () {
+                let codes = "<b>text</b>";
+                $("#btn1").on("click", function () {
+                    let url = prompt("주소를 입력해 주세요");
+                    $("#link").attr("href",url);
+                });
+
+                $("#btn2").on("click", function () {
+                    $("#link").attr("href");
+                });
+                
+            });
+        </script>
+
+    </body>
+</html>

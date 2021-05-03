@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <style>
+
+
+        .bg{     
+            position: absolute;
+            display: inline-block;
+            width: 400px;
+            min-height: 200px;
+            background-color: red;
+            left: 30%;
+            top: 200px;
+        }
+        .topbar{
+            display: inline-block;
+            width: 400px;
+            height: 60px;
+            line-height: 60px;
+            background-color: #aaaaaa;
+        }
+        #bt1{
+            position: absolute;
+            display: inline-block; 
+            width: 100px;
+            height: 30px;
+            left: 0px;
+            bottom: -30px;
+            
+
+        }
+        #inq{
+            display: inline-block;
+            width: 380px;
+            height: 50px;
+            margin-left: 10px;
+            margin-top: 5px;
+            line-height: 50px;
+            background-color: white;
+        }
+
+    </style>
+    <body>
+        <div class="bg">
+            <div class="topbar">기사등록하기</div>
+            <span id="textbox"></span>
+        <!--    <span id="inq"></span> -->
+        <button id="bt1">입력하기</button>
+        </div>
+        <script>
+
+            $(function() {
+                $("#bt1").on("click", function(){
+                    let title = prompt("기사를 입력해 주세요.");
+                    console.log(title);
+                    $("#textbox").append('<span id="inq">'+title+'</span>');
+                });
+
+            });
+
+        
+        </script>
+
+    </body>
+</html>
