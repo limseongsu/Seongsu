@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <style>
+        .hidden {
+            display: none;
+        }
+        .view { 
+            display: block;
+        }
+        body{
+            width: 100%;
+            height: 100%;
+        }
+        #main{
+            position: absolute;
+            width: 30;
+            height: 30;
+            left: 300px;
+            top: 200px;
+        }
+        #text{
+            font-size: 30px;
+        }
+    </style>
+    <body>
+        <div id="main">
+            <div id="text"></div>
+            <button id="red">RED</button>
+            <button id="green">GREEN</button>
+            <button id="blue">BLUE</button>
+        </div>
+        <script>
+
+            function gear() {
+                let input = prompt("텍스트를 입력해 주세요");
+                console.log(input);
+                if (input != '') {
+                    $("#main").attr("class", "view");
+                    $("#text").text(input);
+                } else {
+                    gear();
+                }
+            }
+
+            $(function () {
+                $("#main").attr("class", "hidden");
+
+                gear();
+
+                $("#red").on("click", function () {
+                    alert('빨간색으로 바뀝니다');
+                    $("#text").css("color", "#FF0000");
+                });
+                $("#green").on("click", function () {
+                    alert('초록색으로 바뀝니다');
+                    $("#text").css("color", "#00FF00");
+                });
+                $("#blue").on("click", function () {
+                    alert('파란색으로 바뀝니다');
+                    $("#text").css("color", "#0000FF");
+                });
+                $("#red").on("click", function () {
+                    $("#red").css("background-color", "#FF0000");
+                });
+                $("#green").on("click", function () {
+                    $("#green").css("background-color", "#00FF00");
+                });
+                $("#blue").on("click", function () {
+                    $("#blue").css("background-color", "#0000FF");
+                });
+
+            });
+        </script>
+
+    </body>
+</html>

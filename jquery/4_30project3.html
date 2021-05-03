@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <style>
+        span {
+            display: inline-block;
+            width: 200px;
+            height: 80px;
+            text-align: center;
+            line-height: 80px;
+            border: 1px black solid;
+            position: relative;
+            margin-left: 10%;
+            cursor: pointer;
+            left: 8%;
+            top: 200px;
+        }
+
+        .boxs {
+            background-color: gray;
+            color: white;
+        }
+    </style>
+    <body>
+        <span id="bt1" class="boxs">html</span>
+        <span id="bt2" class="boxs">css</span>
+        <span id="bt3" class="boxs">javascript</span>
+
+        <script>
+            $(function () {
+                $("#bt1").on("click", function () {
+                    $(".boxs").css("background-color", "gray");
+                    $("#bt1").css("background-color", "white");
+
+                });
+                $("#bt1").on("click", function () {
+                    $(".boxs").css("color", "white");
+                    $("#bt1").css("color", "black");
+                });
+                $("#bt2").on("click", function () {
+                    $(".boxs").css("background-color", "gray");
+                    $("#bt2").css("background-color", "white");
+
+                });
+                $("#bt2").on("click", function () {
+                    $(".boxs").css("color", "white");
+                    $("#bt2").css("color", "black");
+                });
+                $("#bt3").on("click", function () {
+                    $(".boxs").css("background-color", "gray");
+                    $("#bt3").css("background-color", "white");
+
+                });
+                $("#bt3").on("click", function () {
+                    $(".boxs").css("color", "white");
+                    $("#bt3").css("color", "black");
+                });
+
+            });
+        </script>
+
+    </body>
+</html>
