@@ -11,7 +11,6 @@
             height: 80px;
             text-align: center;
             line-height: 80px;
-            border: 1px black solid;
             position: relative;
             margin-left: 10%;
             cursor: pointer;
@@ -22,6 +21,7 @@
         .boxs {
             background-color: gray;
             color: white;
+        
         }
     </style>
     <body>
@@ -34,6 +34,7 @@
                 $("#bt1").on("click", function () {
                     $(".boxs").css("background-color", "gray");
                     $("#bt1").css("background-color", "white");
+                    $("#bt1").css("border", "1px black solid");
 
                 });
                 $("#bt1").on("click", function () {
@@ -43,6 +44,7 @@
                 $("#bt2").on("click", function () {
                     $(".boxs").css("background-color", "gray");
                     $("#bt2").css("background-color", "white");
+                    $("#bt2").css("border", "1px black solid");
 
                 });
                 $("#bt2").on("click", function () {
@@ -52,6 +54,7 @@
                 $("#bt3").on("click", function () {
                     $(".boxs").css("background-color", "gray");
                     $("#bt3").css("background-color", "white");
+                    $("#bt3").css("border", "1px black solid");
 
                 });
                 $("#bt3").on("click", function () {
