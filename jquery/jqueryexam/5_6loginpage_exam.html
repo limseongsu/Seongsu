@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>loginpage</title>
+    </head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <body>
+        <tr>
+            <th scope="row">이메일
+                <span class="em_red">*</th>
+                <td>
+                    <input
+                        type="text"
+                        id="email_id"
+                        name="email_id"
+                        class="form_w200"
+                        value=""
+                        title="이메일 아이디"
+                        placeholder="이메일"
+                        maxlength="18">
+                    @
+                    <input
+                        type="text"
+                        id="email_domain"
+                        name="email_domain"
+                        class="form_w200"
+                        value=""
+                        title="이메일 도메인"
+                        placeholder="이메일 도메인"
+                        maxlength="18">
+                    <select
+                        class="select"
+                        title="이메일 도메인 주소 선택"
+                        onclick="setEmailDomain(this.value);return false;">
+                        <option value="">-선택-</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="gmail.com">gmail.com</option>
+                        <option value="hanmail.net">hanmail.net</option>
+                        <option value="hotmail.com">hotmail.com</option>
+                        <option value="korea.com">korea.com</option>
+                        <option value="nate.com">nate.com</option>
+                        <option value="yahoo.com">yahoo.com</option>
+                    </select>
+                </td>
+            </tr>
+        </br>
+        패스워드:<input type="password" name="pw" length="length"><br/>
+        <button onclick="chkPW()">signUp</button><br/>
+        남자:<input type="radio" name="sex" value="male">
+        여자:<input type="radio" name="sex" value="female">
+        <br/>
+        취미
+        <br/>취미<input type="checkbox" name="hobby" value="취미">
+        개발<input type="checkbox" name="hobby" value="개발">
+        게임<input type="checkbox" name="hobby" value="게임">
+        낚시<input type="checkbox" name="hobby" value="낚시"><br/>
+        운동<input type="checkbox" name="hobby" value="운동">
+        독서<input type="checkbox" name="hobby" value="독서">
+        음악감상<input type="checkbox" name="hobby" value="음악감상"><br/>
+        <br/>
+
+        <script>
+
+            function chkPW() {
+                var pw = $("#password").val();
+                var num = pw.search(/[0-9]/g);
+                var eng = pw.search(/[a-z]/ig);
+                var spe = pw.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
+
+                if (pw.length < 8 || pw.length > 20) {
+                    alert("8자리 ~ 20자리 이내로 입력해주세요.");
+                    return false;
+                } else if (pw.search(/\s/) != -1) {
+                    alert("비밀번호는 공백 없이 입력해주세요.");
+                    return false;
+                } else if (num < 0 || eng < 0 || spe < 0) {
+                    alert("영문,숫자, 특수문자를 혼합하여 입력해주세요.");
+                    return false;
+                } else {
+                    console.log("통과");
+                    return true;
+                }
+            }
+            var email_rule = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+            var email_id = $("#email_id").val();
+            var email_domain = $("#email_domain").val();
+            var mail = "";
+
+            if (!email_id) {
+                alert("이메일을 입력해주세요");
+                $("#email_id").focus();
+                return false;
+            }
+            if (!email_domain) {
+                alert("도메인을 입력해주세요");
+                $("#email_domain").focus();
+                return false;
+            }
+            mail = email_id + "@" + email_domain;
+            $("#mail").val(mail);
+
+            if (!email_rule.test(mail)) {
+                alert("이메일을 형식에 맞게 입력해주세요.");
+                return false;
+            }
+
+            function setEmailDomain(domain) {
+                $("#email_domain").val(domain);
+            }
+
+            $("#btn5").on("click", function () {
+                let count = 0;
+                $("input:checkbox[name=mycheck]").each(function () {
+                    if (count % 2 == 0) {
+                        $(this).prop("checked", true);
+                    }
+                    count++;
+                });
+            });
+        </script>
+    </body>
+</html>

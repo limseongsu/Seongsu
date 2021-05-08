@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <style>
+        body {
+            width: auto;
+            height: auto;
+        }
+        #bg {
+            position: absolute;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            border: 1px black solid;
+        }
+        #chac {
+            display: inline-block;
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 300px;
+            left: 300px;
+
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+
+    <body>
+        <div id="bg">
+            <div id="chac"><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsSfjbfvvJQ2Eo3nFwr3EmGIdRM5oXRCDx1Q&usqp=CAU">
+            </div>
+        </div>
+       
+
+        <script>
+            $(function () {
+      $("body").keydown(function(e){
+          if(e.key == "ArrowLeft") {
+              $("#chac").animate({left:"-=100px"},20);
+          }
+          if(e.key == "ArrowRight") {
+              $("#chac").animate({left:"+=100px"},20);
+          }
+          if(e.key == "ArrowUp") {
+              $("#chac").animate({top:"-=100px"},20);
+          }
+          if(e.key == "ArrowDown") {
+              $("#chac").animate({top:"+=100px"},20);
+          }
+      });
+
+            });
+        </script>
+    </body>
+</html>

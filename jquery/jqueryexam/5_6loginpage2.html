@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <style></style>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <body>
+        아이디
+        <input type="text" id="input1"/>
+        <br/>
+        비밀번호
+        <input type="password" id="input2"/>
+        <br/>
+        성별
+        <input type="radio" name="sex" value="male"/>남자
+        <input type="radio" name="sex" value="female"/>여자
+        <br/>
+        직업
+        <select id="job" name="job">
+            <option value=""></option>
+            <option value="1">프로그래머</option>
+            <option value="2">학생</option>
+            <option value="3">군인</option>
+            <option value="4"></option>
+        </select>
+        <br/>
+        취미
+        <input type="checkbox" name="hobby" value="1">개발
+        <input type="checkbox" name="hobby" value="2">게임
+        <input type="checkbox" name="hobby" value="3">낚시<br/>
+        <input type="checkbox" name="hobby" value="4">운동
+        <input type="checkbox" name="hobby" value="5">독서
+        <input type="checkbox" name="hobby" value="6">음악감상
+        <br/>
+
+        <input type="reset" value="초기화">
+        <button>회원가입</button>
+
+        <script>
+            $(function () {
+                $("button").on("click", function () {
+                    let count = $("input:checkbox[name=hobby]:checked").length;
+                    var regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+
+                    if ($("#input1").val().length < 5) {
+                        alert("아이디를 5자 이상 입력해주세요");
+                        return 0;
+                    } else if ($("#input1").val().match(regExp) == null) {
+                        alert("아이디는 이메일 형식 입니다.");
+                        return 0;
+                    } else if ($("#input2").val().length < 5) {
+                        alert("패스워드를 5자 이상 입력해주세요");
+                        return 0;
+
+                    } else if ($("#job").val() == "") {
+                        alert("직업을 선택해 주세요")
+                        return 0;
+                    } else if ($("input:checkbox[name=hobby]:checked").length < 3) {
+                        alert("취미를 3개이상 선택해주세요");
+                    } else {
+                        alert("회원가입을 완료하였습니다.");
+                    }
+                })
+
+                console.log($("#input1").val());
+                console.log($("#job").val());
+                console.log($("input:radio[name=sex]:checked").length);
+                console.log($("input:checkbox[name=hobby]:checked").length);
+
+            });
+        </script>
+    </body>
+</html>

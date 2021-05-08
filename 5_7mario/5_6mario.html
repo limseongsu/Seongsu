@@ -1,0 +1,221 @@
+<html>
+    <head>
+        <title>
+            javascript
+        </title>
+    </head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <style>
+
+        img {
+            width: 80px;
+            height: 80px;
+        }
+
+        #marioimg {
+            width: 100px;
+            height: 100px;
+        }
+      
+        
+        #main {
+            position: absolute;
+            top: 0;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #000;
+            background: white;
+            text-align: center;
+            font-size: 40px;
+            line-height: 100px;
+
+        }
+        #bt1 {
+            position: absolute;
+            left: 45%;
+            bottom: 10%;
+            width: 150px;
+            height: 50px;
+        }
+
+        #bgimg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .ch {
+            position: absolute;
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+        }
+
+        #mario {
+            position: absolute;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+
+        #mimage {
+            position: absolute;
+            left: 41%;
+            bottom: 34%;
+            width: 250px;
+            height: 250px;
+        }
+        #bg{
+            background: url("../5_7mario/mario/bgimage.gif");
+            width: 100%;
+            height: 99% ;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+    <body>
+
+        <div id="bg">
+            <div class="ch" id="mario"><img id="marioimg" src="../5_7mario/mario/man.gif"></div>
+            <div class="ch" id="killer"><img src="../5_7mario/mario/killer.jpeg"></div>
+            <div class="ch" id="gb"><img src="../5_7mario/mario/gb.gif"></div>
+        </div>
+        <div id="main">
+            자바스크립트 마리오
+            <br/>
+            개발자 : 임성수
+            <br/>
+            <button id="bt1">게임시작</button>
+            <img id="mimage" src="../5_7mario/mario/mainimage.gif">
+        </div>
+
+        점수 :<span id="score"></span>
+
+        <script>
+            var jumping = 0;
+            var alive = 0;
+            var misiling = 0;
+            var score = 0;
+            var start = 0;
+
+            var timmer = setInterval(function () {
+
+                if (start == 1) {
+
+                    let mario_bottom = parseInt($("#mario").css("bottom"), 10);
+                    let gb_left = parseInt($("#gb").css("left"), 10);
+                    let killer_left = parseInt($("#killer").css("left"), 10);
+
+                    if (mario_bottom < 50 && gb_left < 100 && gb_left > 50 && alive == 0) {
+                        alert("마리오 사망");
+                        $("#mario").hide();
+                        alive = 1;
+                        startnow();
+                    }
+
+                    if ((gb_left - killer_left) < 50 && misiling == 1) {
+
+                        $("#killer").stop();
+                        $("#killer").hide();
+                        misiling = 0;
+
+                        $("#gb").stop();
+                        $("#gb").hide();
+                        gb_default();
+
+                        scoreplus(200);
+                    }
+                }
+
+            }, 100)
+
+            function mario_default() {
+                $("#mario").show();
+                $("#mario").css({left: "0px", bottom: "10px"});
+            }
+
+            function scoreplus(num) {
+                score = score + num;
+                $("#score").text(score);
+            }
+
+            function gb_default() {
+                let movspeed = Math.ceil(Math.random() * 10000);
+                if (movspeed < 4000) {
+                    movspeed = 4000;
+                }
+                if (movspeed > 8000) {
+                    movspeed = 8000;
+                }
+                $("#gb").show();
+                $("#gb").css({right: "0px", bottom: "10px"});
+                $("#gb").animate({
+                    right: "100%"
+                }, movspeed, function () {
+                    if (alive == 0) {
+                        scoreplus(100);
+                    }
+                    gb_default();
+                });
+            }
+
+            function killer_default() {
+                if (misiling == 0 && alive == 0) {
+                    misiling = 1;
+                    $("#killer").show();
+                    $("#killer").css({left: "100px", bottom: "10px"});
+                    $("#killer").animate({
+                        left: "100%"
+                    }, 1000, function () {
+                        misiling = 0;
+                    });
+                }
+            }
+
+            function startnow() {
+
+                // $("#bgimg").animate({     left: "-=100%" }, 15000, function () {
+                // $("#bgimg")         .clone()         .appendTo("#unnderbg"); });
+
+                $("body").keydown(function (event) {
+                    if (event.keyCode == 13) {
+                        killer_default();
+                    }
+                    if (event.keyCode == 32) {
+                        if (jumping == 0) {
+                            jumping = 1;
+                            $("#mario").animate({
+                                bottom: "200px"
+                            }, 500);
+                            $("#mario").animate({
+                                bottom: "0px"
+                            }, 500, function () {
+                                jumping = 0;
+                            });
+                        }
+                    }
+                });
+
+                mario_default();
+                gb_default();
+            }
+
+            $(function () {
+
+                $("#mario").hide();
+                $("#killer").hide();
+                $("#gb").hide();
+
+                $("button").on("click", function () {
+                    $("#main").hide();
+                    start = 1;
+                    startnow();
+
+                });
+
+            });
+        </script>
+
+    </body>
+</html>

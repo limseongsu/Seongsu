@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- saved from url=(0077)file:///Users/imseongsu/dev/vscode/Seongsu/jquery/jqueryexam/5_6checkbox.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>checkbox</title>
+    <style></style><script src="./checkbox_files/jquery-1.12.4.js"></script></head>
+    
+    
+    <body>
+
+        <table border="1px" width="300px" height="400px" align="center">
+            <tbody><tr>
+                <td><input type="checkbox" name="check" id="bt" value="확인"></td>
+                <td>제목</td>
+                <td>글쓴시간</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="check" id="bt" value="확인"></td>
+                <td>111111</td>
+                <td>11:11:00</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="check" id="bt" value="확인"></td>
+                <td>222222</td>
+                <td>11:11:00</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="check" id="bt" value="확인"></td>
+                <td>ㅁㄴㅇㅁㄴㅇㅁㄴㅇㅁㄴㅇ</td>
+                <td>11:11:00</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="check" id="bt" value="확인"></td>
+                <td>ㅁㄴㅇㅁㄴㅇ3333</td>
+                <td>11:11:00</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="check" id="bt" value="확인"></td>
+                <td>ㅁ44444ㅇㅁㄴㅇㅁㄴㅇ</td>
+                <td>11:11:00</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="check" id="bt" value="확인"></td>
+                <td>ㅁㄴ55555ㄴㅇ</td>
+                <td>11:11:00</td>
+            </tr>
+
+        </tbody></table>
+        <button>로그</button>
+        <script>
+           $(function(){
+                $("#bt").on("click", function () {
+                 if( $(this).prop("checked") == true){
+                     console.log('모두체크')
+                     $("input:checkbox[name=check]").prop("checked", true);
+                 }else{
+                    console.log('모두해제')
+                    $("input:checkbox[name=check]").prop("checked", false);
+                 }
+                });
+             })
+        </script>
+
+    
+</body></html>
