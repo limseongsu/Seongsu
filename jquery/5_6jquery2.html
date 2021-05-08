@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <style></style>
+
+    <body>
+        <div
+            id="test"
+            style="display: inline-block; position: absolute; width: 300px; height: 300px; background-color: brown;">
+            <button id="left">left</button>
+            <button id="right">right</button>
+        </div>
+       
+
+        <script>
+            $(function () {
+                // $("#test").hide(10000);    $("#test").show(10000); $("#test").fadeOut(5000);
+                // $("#test").fadein(5000); $("#test").slideDown(5000);
+                // $("#test").slideUp(5000); $("#test").animate({     right: "10%" }, 2000);
+                // $("#test").animate({     width: "100%" }, 2000); $("#test").animate({
+                // width: "10%" }, 2000);
+                $("#right").on("click", function () {
+                    $("#test").animate({
+                        left: "+=100px"
+                    }, 2000);
+                });
+                $("#left").on("click", function () {
+                    $("#test").animate({
+                        left: "-=100px"
+                    }, 2000);
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>javascript</title>
+    </head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <style></style>
+
+    <body>
+        <input type="checkbox" name="mycheck" value="1"><br/>
+        <input type="checkbox" name="mycheck" value="2"><br/>
+        <input type="checkbox" name="mycheck" value="3"><br/>
+        <input type="checkbox" name="mycheck" value="4"><br/>
+        <input type="checkbox" name="mycheck" value="5"><br/>
+
+        <button id="btn1">log</button>
+        <button id="btn2">all check</button>
+        <button id="btn3">all no check</button>
+
+        <button id="btn4">짝수</button>
+        <button id="btn5">홀수</button>
+
+        <script>
+            $(function () {
+                let count = $("input:checkbox[name=mycheck]").length;
+                
+                console.log(count);
+
+                $("#btn1").on("click", function () {
+                    let checkbtn = $("input:checkbox[name=mycheck]:checked").length;
+                    console.log(checkbtn);
+                });
+                $("#btn2").on("click", function () {
+                    let checkbtn = $("input:checkbox[name=mycheck]").prop("checked", true);
+                });
+
+                $("#btn3").on("click", function () {
+                    let checkbtn = $("input:checkbox[name=mycheck]").prop("checked", false);
+
+                });
+                $("#btn4").on("click", function () {
+                    let count = 0;
+                    $("input:checkbox[name=mycheck]").each(function () {
+                        if (count % 2) {
+                            $(this).prop("checked",true);
+                        }
+                        console.log(count+"ok!");
+                        count++;
+                    });
+                });
+
+                $("#btn5").on("click", function () {
+                    let count = 0;
+                    $("input:checkbox[name=mycheck]").each(function () {
+                        if (count % 2 == 0) {
+                            $(this).prop("checked",true);
+                        }
+                        count++;
+                    });
+                });
+
+            });
+        </script>
+    </body>
+</html>
